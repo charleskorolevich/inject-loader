@@ -5,13 +5,13 @@ module.exports = {
   entry: path.resolve(constants.SOURCE_PATH, 'index.js'),
   target: 'node',
   mode: 'production',
+  devtool: 'source-map',
   output: {
     path: constants.TEMP_PATH,
     filename: 'index.js',
-    library: 'InjectLoader',
-    libraryTarget: 'commonjs-module',
+    libraryTarget: 'commonjs',
   },
-  externals: constants.NODE_EXTERNAL_DEPS.map(dep => ({
+  externals: constants.NODE_EXTERNAL_DEPS.map((dep) => ({
     [dep]: `commonjs ${dep}`,
   })),
   module: {
@@ -20,7 +20,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [constants.SOURCE_PATH, constants.TESTS_PATH],
-        query: {
+        options: {
           cacheDirectory: true,
           presets: [
             [
