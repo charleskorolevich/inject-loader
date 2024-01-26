@@ -2,3 +2,5 @@ package.json
 dist/*
 tmp/*
 *.md
+*.lock
+.prettierignore
