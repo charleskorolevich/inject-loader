@@ -1,5 +1,5 @@
 {
-  "name": "inject-loader",
+  "name": "@charleskorolevich/inject-loader",
   "version": "5.0.0",
   "description": "A Webpack loader for injecting code into modules via their dependencies",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
   "author": "Justin Morris <desk@pixelbloom.com> (http://pixelbloom.com)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:plasticine/inject-loader.git"
+    "url": "git@github.com:charleskorolevich/inject-loader.git"
   },
   "license": "MIT",
   "dependencies": {
